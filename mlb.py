@@ -153,13 +153,15 @@ def print_result(data):
 
     print "Box score for {}:\n".format(date.strftime("%A, %B %e, %Y"))
 
-    print "{: <12} {: <5} {: <5} {: <5}".format(
+    print "{: <5} {: <12} {: <5} {: <5} {: <5}".format(
+            "[x]",
             home_team,
             "5",
             "6",
             "0")
 
-    print "{: <12} {: <5} {: <5} {: <5}\n".format(
+    print "{: <5} {: <12} {: <5} {: <5} {: <5}\n".format(
+            "[ ]",
             away_team,
             "4",
             "5",
