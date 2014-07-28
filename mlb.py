@@ -8,6 +8,7 @@ import urllib2
 import gzip
 import json
 import argparse
+import dateutil.parser
 
 # Replace with your access token
 #access_token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -138,7 +139,32 @@ def print_result(data):
     # Parses the JSON content and returns a reference
     # to Events (https://erikberg.com/api/methods/events)
     box_score = json.loads(data)
-    print box_score
+    
+    date = dateutil.parser.parse(box_score["event_information"]["start_date_time"])
+    away_team = box_score["away_team"]["last_name"]
+    home_team = box_score["home_team"]["last_name"]
+
+
+    # def calculate_home_hits():
+    #     for k, v in box_score.items(["home_batters"]["hits"]):
+    #         print k, v
+
+    #print "{: <35} {:5} {: >34}".format("Date", "Game", "Score")
+
+    print "Box score for {}:\n".format(date.strftime("%A, %B %e, %Y"))
+
+    print "{: <12} {: <5} {: <5} {: <5}".format(
+            home_team,
+            "5",
+            "6",
+            "0")
+
+    print "{: <12} {: <5} {: <5} {: <5}\n".format(
+            away_team,
+            "4",
+            "5",
+            "1")
+
     return
 
 
