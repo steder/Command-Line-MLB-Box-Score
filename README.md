@@ -1,4 +1,4 @@
-# MLB BOX SCORES FROM THE COMMAND LINE #
+# COMMAND LINE MLB BOX SCORES#
 
 ### What is this for? ###
 
@@ -7,16 +7,14 @@
 
 ### How do I get set up? ###
 
-Fork this repo and add you own access token. 
+Fork this repo and add your own access token. 
 
-
+### Get the box score
+``cd mlb-box-scores``
 ``python mlb.py -d 20140520 -t cardinals``
 
-
-``-d --date Date of game in format YYYYMMDD``
-
-
-``-t --team Team to get scores for i.e. cardinals``
+### See optional arguments
+``python mlb.py -h``
 
 ### Contribution guidelines ###
 

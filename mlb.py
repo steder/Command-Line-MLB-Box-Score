@@ -18,9 +18,9 @@ access_token = "992c5bbd-c0a4-4f56-aaa9-238f5b4deabc"
 # e.g., "mybot/0.1 (https://erikberg.com/)"
 user_agent = "mybot/0.1 (http://sawdust.io/)"
 
-parser = argparse.ArgumentParser(description='MLB Box scores')
-parser.add_argument('-d','--date', help='Date of game', required=True)
-parser.add_argument('-t','--team', help='Team Name', required=True)
+parser = argparse.ArgumentParser(description='Command line MLB box scores')
+parser.add_argument('-d','--date', help='Date of game format YYYYMMDD', required=True)
+parser.add_argument('-t','--team', help='Team name i.e. Cardinals', required=True)
 
 args = parser.parse_args()
 argsdict = vars(args)
