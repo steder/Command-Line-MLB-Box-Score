@@ -2,7 +2,8 @@
 
 ### What is this for? ###
 
-* Hate having to search for MLB scores in the browser? Of course you do. 
+* Hate having to search for MLB scores in the browser? Of course you do.
+* We're using xmlstats API
 * Version 1.0
 
 ### How do I get set up? ###

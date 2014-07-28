@@ -142,7 +142,7 @@ def get_box_score():
 
 def print_result(data):
     # Parses the JSON content and returns a reference
-    # to Events (https://erikberg.com/api/methods/events)
+    # to MLB Box Score (https://erikberg.com/api/methods/mlb-box-score)
     box_score = json.loads(data)
     
     # Date of game
