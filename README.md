@@ -9,9 +9,13 @@
 
 Fork this repo and add you own access token. 
 
+
 ``python mlb.py -d 20140520 -t cardinals``
 
+
 ``-d --date Date of game in format YYYYMMDD``
+
+
 ``-t --team Team to get scores for i.e. cardinals``
 
 ### Contribution guidelines ###
