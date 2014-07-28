@@ -14,6 +14,8 @@ Fork this repo and add your own access token.
 
 ``python mlb.py -d 20140520 -t cardinals``
 
+![Example](https://i.imgur.com/uC7jZAX.png)
+
 ### See optional arguments
 ``python mlb.py -h``
 
