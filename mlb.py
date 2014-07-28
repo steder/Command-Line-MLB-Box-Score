@@ -25,7 +25,8 @@ parser.add_argument('-t','--team', help='Team name i.e. Cardinals', required=Tru
 args = parser.parse_args()
 argsdict = vars(args)
 
-def initial_request():
+
+def setup_event_id():
     # set the API method, format, and any parameters
     host = "erikberg.com"
     sport = 'mlb'
@@ -69,6 +70,7 @@ def initial_request():
         else:
             return event_id
 
+
 def get_event_id(data):
     # Parses the JSON content and returns a reference
     # to Events (https://erikberg.com/api/methods/events)
@@ -84,6 +86,7 @@ def get_event_id(data):
             else:
                 return
 
+
 # See https://erikberg.com/api/methods Request URL Convention for
 # an explanation
 def build_event_url(host, sport, method, id, format, parameters):
@@ -94,8 +97,9 @@ def build_event_url(host, sport, method, id, format, parameters):
         url = url + "?" + paramstring
     return url
 
+
 def get_box_score():
-    event_id = initial_request();
+    event_id = setup_event_id();
     # set the API method, format
     host = "erikberg.com"
     sport = 'mlb'
@@ -135,6 +139,7 @@ def get_box_score():
         print "Something has gone wrong. No data returned"
     return
 
+
 def print_result(data):
     # Parses the JSON content and returns a reference
     # to Events (https://erikberg.com/api/methods/events)
@@ -144,10 +149,10 @@ def print_result(data):
     date = dateutil.parser.parse(box_score["event_information"]["start_date_time"])
 
     #Game info
-    temperature = box_score["event_information"]["temperature"]
+    #temperature = box_score["event_information"]["temperature"]
     stadium = box_score["event_information"]["site"]["name"]
-    attendance = box_score["event_information"]["attendance"]
-    duration = box_score["event_information"]["duration"]
+    #attendance = box_score["event_information"]["attendance"]
+    #duration = box_score["event_information"]["duration"]
 
     # Team names
     home_team = box_score["home_team"]["last_name"]
@@ -162,8 +167,8 @@ def print_result(data):
     away_team_hits = box_score["away_batter_totals"]["hits"]
 
     # Errors
-    home_team_errors = 0
-    away_team_errors = 1
+    home_team_errors = 1
+    away_team_errors = 0
 
     # Team win
     home_team_win = None
@@ -176,9 +181,7 @@ def print_result(data):
         home_team_win = "[ ]"
         away_team_win = "[x]"
 
-
     print "\n" + stadium + ' ' + format(date.strftime("%A, %B %e, %Y")) + "\n"
-    #print temperature, attendance, duration
 
     print "{: <5} {: <12} {: <5} {: <5} {: <5}".format(
             home_team_win,
