@@ -143,6 +143,12 @@ def print_result(data):
     # Date of game
     date = dateutil.parser.parse(box_score["event_information"]["start_date_time"])
 
+    #Game info
+    temperature = box_score["event_information"]["temperature"]
+    stadium = box_score["event_information"]["site"]["name"]
+    attendance = box_score["event_information"]["attendance"]
+    duration = box_score["event_information"]["duration"]
+
     # Team names
     home_team = box_score["home_team"]["last_name"]
     away_team = box_score["away_team"]["last_name"]
@@ -171,7 +177,8 @@ def print_result(data):
         away_team_win = "[x]"
 
 
-    print "\nBox score for {}:\n".format(date.strftime("%A, %B %e, %Y"))
+    print "\n" + stadium + ' ' + format(date.strftime("%A, %B %e, %Y")) + "\n"
+    #print temperature, attendance, duration
 
     print "{: <5} {: <12} {: <5} {: <5} {: <5}".format(
             home_team_win,
