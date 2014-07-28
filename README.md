@@ -11,6 +11,7 @@ Fork this repo and add your own access token.
 
 ### Get the box score
 ``cd mlb-box-scores``
+
 ``python mlb.py -d 20140520 -t cardinals``
 
 ### See optional arguments
