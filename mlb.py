@@ -140,10 +140,28 @@ def print_result(data):
     # to Events (https://erikberg.com/api/methods/events)
     box_score = json.loads(data)
     
+    #
     date = dateutil.parser.parse(box_score["event_information"]["start_date_time"])
+
+    # Team Names
     away_team = box_score["away_team"]["last_name"]
     home_team = box_score["home_team"]["last_name"]
+    
+    # TO DO (use real data to calculate these numbers):
+    # Runs
+    home_team_runs = 5
+    away_team_runs = 4
+    
+    # Hits
+    home_team_hits = 6
+    away_team_hits = 5
 
+    # Errors
+    home_team_errors = 0
+    away_team_errors = 1
+
+    # is_winner = None
+    # is_loser = None
 
     # def calculate_home_hits():
     #     for k, v in box_score.items(["home_batters"]["hits"]):
@@ -151,21 +169,21 @@ def print_result(data):
 
     #print "{: <35} {:5} {: >34}".format("Date", "Game", "Score")
 
-    print "Box score for {}:\n".format(date.strftime("%A, %B %e, %Y"))
+    print "\nBox score for {}:\n".format(date.strftime("%A, %B %e, %Y"))
 
     print "{: <5} {: <12} {: <5} {: <5} {: <5}".format(
             "[x]",
             home_team,
-            "5",
-            "6",
-            "0")
+            home_team_runs,
+            home_team_hits,
+            home_team_errors)
 
     print "{: <5} {: <12} {: <5} {: <5} {: <5}\n".format(
             "[ ]",
             away_team,
-            "4",
-            "5",
-            "1")
+            away_team_runs,
+            away_team_hits,
+            away_team_errors)
 
     return
 
