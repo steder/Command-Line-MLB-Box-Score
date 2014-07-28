@@ -144,16 +144,16 @@ def print_result(data):
     date = dateutil.parser.parse(box_score["event_information"]["start_date_time"])
 
     # Team names
-    away_team = box_score["away_team"]["last_name"]
     home_team = box_score["home_team"]["last_name"]
-    
+    away_team = box_score["away_team"]["last_name"]
+
     # Runs
     home_team_runs = box_score["home_batter_totals"]["runs"]
     away_team_runs = box_score["away_batter_totals"]["runs"]
     
     # Hits
     home_team_hits = box_score["home_batter_totals"]["hits"]
-    away_team_hits = box_score["home_batter_totals"]["hits"]
+    away_team_hits = box_score["away_batter_totals"]["hits"]
 
     # Errors
     home_team_errors = 0
