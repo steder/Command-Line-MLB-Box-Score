@@ -131,7 +131,7 @@ def get_box_score():
     if data:
         print_result(data)
     else:
-        print "Fuck"
+        print "Something has gone wrong. No data returned"
     return
 
 def print_result(data):
@@ -139,6 +139,7 @@ def print_result(data):
     # to Events (https://erikberg.com/api/methods/events)
     box_score = json.loads(data)
     print box_score
+    return
 
 
 def build_box_score_url(host, sport, method, game, format):
