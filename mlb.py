@@ -174,6 +174,8 @@ def print_result(data):
     home_team_win = None
     away_team_win = None
 
+    baseball_character = u"\u26BE"
+
     if home_team_runs > away_team_runs:
         home_team_win = "[x]"
         away_team_win = "[ ]"
@@ -181,7 +183,7 @@ def print_result(data):
         home_team_win = "[ ]"
         away_team_win = "[x]"
 
-    print "\n" + stadium + ' ' + format(date.strftime("%A, %B %e, %Y")) + "\n"
+    print "\n" + baseball_character + ' ' + stadium + ' ' + format(date.strftime("%A, %B %e, %Y")) + "\n"
 
     print "{: <5} {: <12} {: <5} {: <5} {: <5}".format(
             home_team_win,
