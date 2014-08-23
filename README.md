@@ -22,6 +22,11 @@ Fork this repo and add your own access token.
 ### See optional arguments
 ``python mlb.py -h``
 
+### To do ###
+
+Errors column is hard coded. Make that a thing.
+
+
 ### Contribution guidelines ###
 
 Sure let's.
