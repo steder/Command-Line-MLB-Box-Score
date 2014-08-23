@@ -12,11 +12,9 @@ import dateutil.parser
 
 # Replace with your access token
 #access_token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-access_token = "992c5bbd-c0a4-4f56-aaa9-238f5b4deabc"
 
 # Replace with your bot name and email/website to contact if there is a problem
 # e.g., "mybot/0.1 (https://erikberg.com/)"
-user_agent = "mybot/0.1 (http://sawdust.io/)"
 
 parser = argparse.ArgumentParser(description='Command line MLB box scores')
 parser.add_argument('-d','--date', help='Date of game format YYYYMMDD', required=True)
