@@ -13,8 +13,6 @@ Fork this repo and add your own access token.
 [Request one here](https://erikberg.com/request-invite)
 
 ### Get the box score
-``cd mlb-box-scores``
-
 ``python mlb.py -d 20140520 -t cardinals``
 
 ![Example](https://i.imgur.com/uC7jZAX.png)
