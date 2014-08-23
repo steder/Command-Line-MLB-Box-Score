@@ -8,7 +8,7 @@
 
 ### How do I get set up? ###
 
-Fork this repo and add your own access token.
+Clone this repo and add your own access token.
 
 [Request one here](https://erikberg.com/request-invite)
 
